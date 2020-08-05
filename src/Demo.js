@@ -13,8 +13,9 @@ function handleExportDataToExcel(){
 
   return (
     <div >
+      <h2>Click here to download a XLS sample</h2>
      <button onClick={handleExportDataToExcel}>
-         excel
+      XLS sample
      </button>
     </div>
   )
