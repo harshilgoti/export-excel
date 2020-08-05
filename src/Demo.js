@@ -15,7 +15,7 @@ function handleExportDataToExcel(){
       return acc
     },0)
     // console.log("sum",sum)
-    data.push(Object.assign(item,{"total price":sum}))
+    data.push(Object.assign(item,{"total_price":sum}))
   })
 
 

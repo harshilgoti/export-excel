@@ -85,8 +85,7 @@ class XlsExport {
   
     objectToTable() {
       // extract keys from the first object, will be the title for each column
-      const colsHead = `<tr>${Object.keys(this._data[0]).map(key => `<td>${key}</td>`).join('')}</tr>`;
-  
+      const colsHead = `<tr>${Object.keys(this._data[0]).map(key => `<td>${key.split("_")[0][0].toUpperCase()+key.split("_")[0].slice(1)+" " + key.split("_").slice(1).join(" ")}</td>`).join('') }</tr>`;
       const colsData = this._data.map(obj => [`<tr>
                   ${Object.keys(obj).map(col => `<td>${obj[col] ? obj[col] : ''}</td>`).join('')}
               </tr>`]) // 'null' values not showed
