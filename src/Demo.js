@@ -10,12 +10,12 @@ function handleExportDataToExcel(){
   dataSample.forEach(item=>{
     // console.log("item",item)
     let sum = 0
-    item.price.reduce((acc,cur)=>{
+   sum = item.price.reduce((acc,cur)=>{
       acc=acc+cur
-      return sum=acc
+      return acc
     },0)
     // console.log("sum",sum)
-    data.push(Object.assign(item,{"sum":sum}))
+    data.push(Object.assign(item,{"total price":sum}))
   })
 
 
