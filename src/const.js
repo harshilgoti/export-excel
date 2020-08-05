@@ -7,6 +7,21 @@ export const dataSample = [{
     "symbol": "IBM",
     "date": "Sep 2004",
     "price": 79.13
+  },
+  {
+    "symbol": "IBM",
+    "date": "Sep 2004",
+    "price": 79.13
+  },
+  {
+    "symbol": "IBM",
+    "date": "Sep 2004",
+    "price": 79.13
+  },
+  {
+    "symbol": "IBM",
+    "date": "Sep 2004",
+    "price": 79.13
   }
 ];
 
