@@ -8,18 +8,18 @@ function handleExportDataToExcel(){
   let data = []
 
   dataSample.forEach(item=>{
-    console.log("item",item)
+    // console.log("item",item)
     let sum = 0
     item.price.reduce((acc,cur)=>{
       acc=acc+cur
       return sum=acc
     },0)
-    console.log("sum",sum)
+    // console.log("sum",sum)
     data.push(Object.assign(item,{"sum":sum}))
   })
 
 
-console.log("data",data)
+// console.log("data",data)
  var xls = new XlsExport(data);
     xls.exportToXLS('sample');
     // xls.exportToCSV('export2017.xls');
