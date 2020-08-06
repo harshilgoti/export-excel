@@ -3,10 +3,10 @@ import  React from 'react';
 import {
     ExcelExport,
     ExcelExportColumn,
-    ExcelExportColumnGroup
+    // ExcelExportColumnGroup
 } from '@progress/kendo-react-excel-export';
 import { aggregateBy, process } from '@progress/kendo-data-query';
-import products from './products.json';
+import {products} from './const';
 
 
 const aggregates = [ { field: 'UnitPrice', aggregate: 'sum' } ];
@@ -16,9 +16,9 @@ const data = process(products, {
 }).data;
 const total = aggregateBy(products, aggregates);
 
-const CustomGroupHeader = (props) => (`Discontinued: ${props.value}`);
+//const CustomGroupHeader = (props) => (`Discontinued: ${props.value}`);
 
-const CustomGroupFooter = (props) => (`SUM: $ ${(props.aggregates.UnitPrice.sum).toFixed(2)}`);
+// const CustomGroupFooter = (props) => (`SUM: $ ${(props.aggregates.UnitPrice.sum).toFixed(2)}`);
 
 const CustomFooter = (props) =>
     (`Total ${props.column.title}: $ ${total.UnitPrice.sum}`);
@@ -30,7 +30,7 @@ function Excel(props) {
     const handleExport=()=>{
         _exporter.save();
     }
-
+console.log("data",data)
         return (
             <div>
                 <button className="k-button" onClick={handleExport} >Export to Excel</button>
@@ -43,7 +43,7 @@ function Excel(props) {
                 >
                     <ExcelExportColumn field="ProductID" title="Product ID" locked={true} width={200} />
                     <ExcelExportColumn field="ProductName" title="Product Name" width={350} />
-                    <ExcelExportColumnGroup title="Availability" headerCellOptions={{ textAlign: 'center' }}>
+                    {/* <ExcelExportColumnGroup title="Availability" headerCellOptions={{ textAlign: 'center' }}> */}
                         <ExcelExportColumn
                             field="UnitPrice"
                             title="Price"
@@ -51,18 +51,18 @@ function Excel(props) {
                             width={150}
                             footerCellOptions={{ wrap: true, textAlign: 'center' }}
                             groupFooterCellOptions={{ textAlign: 'right' }}
-                            groupFooter={CustomGroupFooter}
+                           // groupFooter={CustomGroupFooter}
                             footer={CustomFooter}
                         />
                         <ExcelExportColumn field="UnitsOnOrder" title="Units on Order" />
                         <ExcelExportColumn field="UnitsInStock" title="Units in Stock" />
-                    </ExcelExportColumnGroup>
-                    <ExcelExportColumn
+                    {/* </ExcelExportColumnGroup> */}
+                    {/* <ExcelExportColumn
                         field="Discontinued"
                         title="Discontinued"
                         hidden={true}
                         groupHeader={CustomGroupHeader}
-                    />
+                    /> */}
                 </ExcelExport>
             </div>
         );

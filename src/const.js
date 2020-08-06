@@ -25,3 +25,32 @@ export const dataSample = [{
   }
 ];
 
+export const products =[{
+  ProductID: 1, 
+  ProductName: "Tea", 
+  CategoryID: 1, 
+  QuantityPerUnit: "10 boxes x 20 bags",
+   UnitPrice: 18.0, 
+  UnitsInStock: 39, 
+  UnitsOnOrder:1,
+Discontinued: false 
+},{
+  ProductID: 2, 
+  ProductName: "Tea", 
+  CategoryID: 1, 
+  QuantityPerUnit: "10 boxes x 20 bags",
+   UnitPrice: 18.0, 
+  UnitsInStock: 39, 
+  UnitsOnOrder:1,
+Discontinued: false 
+},
+{
+  ProductID: 3, 
+  ProductName: "Tea", 
+  CategoryID: 1, 
+  QuantityPerUnit: "10 boxes x 20 bags",
+   UnitPrice: 18.0, 
+  UnitsInStock: 39,  
+  UnitsOnOrder:1,
+Discontinued: false 
+}]
