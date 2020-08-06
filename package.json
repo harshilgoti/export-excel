@@ -1,8 +1,10 @@
 {
-  "name": "export-excel",
+  "name": "export-excel-demo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@progress/kendo-data-query": "^1.5.4",
+    "@progress/kendo-react-excel-export": "^3.15.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",

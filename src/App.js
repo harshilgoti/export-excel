@@ -1,10 +1,13 @@
 import React from 'react';
 import Demo from './Demo';
+import Excel from './Excel';
+
 
 function App() {
   return (
     <div className="App">
-      <Demo/>
+      {/* <Demo/> */}
+      <Excel/>
     </div>
   );
 }
